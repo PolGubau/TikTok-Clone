@@ -6,6 +6,9 @@ import React, { useRef, useState } from 'react'
 import styles from './styles.module.css'
 
 
+// every video file
+
+
 export default function VideoPlayer(props) {
     const [playing, setPlaying] = useState(false)
     const video = useRef(null)
