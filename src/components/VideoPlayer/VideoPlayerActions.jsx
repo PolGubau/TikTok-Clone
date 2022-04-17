@@ -5,23 +5,41 @@ import { Heart } from '../icons/Heart'
 import { Comment } from '../icons/Comment'
 import { Share } from '../icons/Share'
 
-export default function VidePlayerActions({likes=12,comments=12,shares=12, hearted=false}) {
+export default function VidePlayerActions({ likes = 12, comments = 12, shares = 12, hearted = false }) {
+    
+    const handleLike=()=>{
+        window.alert('liked')
+    }
+    const handleComment=()=>{
+        window.alert('commented')
+
+    }
+    const handleShare=()=>{
+        window.alert('shared')
+ 
+    }
+    
+    
+    
     return (
         <aside className={styles.actions}>
-            <div className={styles.action}>
+            <button className={styles.action} onClick={handleLike}>
                 <Heart />
-                <strong title='likes'>{likes} </strong>
-            </div>
-            <div className={styles.action}>
+                <span title='likes'>{likes} </span>
+            </button>
+
+            <button className={styles.action} onClick={handleComment}>
+
                 <Comment />
-                <strong title='comments'>{comments} </strong>
+                <span title='comments'>{comments} </span>
+            </button>
 
-            </div>
-            <div className={styles.action}>
+            <button className={styles.action} onClick={handleShare}>
+
                 <Share />
-                <strong title='shares'>{shares} </strong>
+                <span title='shares'>{shares} </span>
+            </button>
 
-            </div>
         </aside>
     )
 }
