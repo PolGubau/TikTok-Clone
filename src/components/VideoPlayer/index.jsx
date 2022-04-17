@@ -4,6 +4,7 @@ import VideoPlayerActions from "../VideoPlayer/VideoPlayerActions.jsx";
 
 import React, { useRef, useState } from 'react'
 import styles from './styles.module.css'
+import VideoDescription from './VideoDescription.jsx';
 
 
 // every video file
@@ -41,6 +42,11 @@ export default function VideoPlayer(props) {
             <i onClick={handlePlay}
                 className={playerClassName}/>
                 <VideoPlayerActions />
+                <VideoDescription 
+                 albumImage={props.albumImage}
+                 author={props.author}
+                 description={props.description}
+                />
         </div>
     )
 }
