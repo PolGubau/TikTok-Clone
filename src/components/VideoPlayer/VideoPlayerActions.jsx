@@ -1,6 +1,6 @@
 
-import styles from './styles.module.css'
 import React from 'react'
+import styles from './styles.module.css'
 import { Heart } from '../icons/Heart'
 
 export default function VidePlayerActions() {
